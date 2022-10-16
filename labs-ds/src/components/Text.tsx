@@ -1,12 +1,11 @@
 import { clsx } from 'clsx'
 
-interface TextProps {
+export interface TextProps {
     size?: 'sm' | 'md' | 'lg';
     children: string;
 }
 
-
-export function Text({ size = 'md' }: TextProps) {
+export function Text({ size = 'md', children }: TextProps) {
     return (
         <span className={clsx("text-gray-100 font-sans",
             {
@@ -14,7 +13,7 @@ export function Text({ size = 'md' }: TextProps) {
                 'text-sm': size == 'md',
                 'text-md': size == 'lg',
             })}>
-            Hello World
+            {children}
         </span>
     )
 }
