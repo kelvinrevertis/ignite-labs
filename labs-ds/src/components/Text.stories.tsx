@@ -11,3 +11,16 @@ export default{
 }as Meta<TextProps>
 
 export const Default: StoryObj = {}
+
+export const Small: StoryObj = {
+    args:{
+        size: 'sm'
+        
+    }
+}
+
+export const Large: StoryObj = {
+    args:{
+        size: 'lg'
+    }
+}
